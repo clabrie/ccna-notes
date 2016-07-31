@@ -1,0 +1,91 @@
+* OSI Layer Model
+
+| Name         | Function |
+|--------------+----------|
+| Application  |          |
+| Presentation |          |
+| Session      |          |
+| Transport    |          |
+| Network      |          |
+| Data-link    |          |
+| Physical     |          |
+
+
+* Error detection =/= Error correction
+** Datalink does a Frame Check sequence. This helps receiving interfaces detect if a frame has been corrupted
+
+* References to data a different layers of OSI model
+** Application, Presentation, Session
+*** Data
+** Transport
+*** Segment
+** Network Layer
+*** Packet
+** Data Link
+*** Frame
+** Physical
+*** Bits
+
+* Protocol Data Unit
+** Combination of data and layer specific header.
+** The data link layer has a header and a footer.
+
+* Same layer interaction
+** When layers interact with each other on different hosts
+* Adjacent layer interaction
+** When layers interact with each other on the same host
+
+* TCP/IP Networking Model
+
+| Name        | Function |
+|-------------+----------|
+| Application |          |
+| Transport   |          |
+| Network     |          |
+| Data Link   |          |
+| Physical    |          |
+
+* TCP
+** Performs *windowing*
+** Performs error detection
+** Connection-Oriented
+** Guaranteed delivery
+
+** Three-Way Handshake
+*** Initial Sequence Number (ISN)
+*** TCP SYN sent with ISN
+*** size of Window: Number of bytes the recipient is willing to receive before an ACK packet is returned.
+*** TCP SYN\ACK is sent back
+*** Initiating server sends confirmation of SYN\ACK and announces end of handshake
+
+** Four-Way Handshake
+Terminates a TCP session
+-> FIN, ACK
+<- ACK
+<- ACK,FIN
+-> ACK
+
+** Cumulative acknowledgement
+Receiving host sends and ack with the next sequences number expected. This helps the sender determine if segments are lost.
+
+** Window Size & Flow Control
+Dynamic. Receiving host and change this value if it's successfully receiving segments
+
+* UDP
+** No Handshake
+** No Flow Control
+** Connectionless
+
+* Multiplexing
+Allows a single data stream to handle different types of traffic simultaneously.
+
+* Common port numbers
+TFTP: UDP port 69
+HTTP: TCP port 80
+HTTPS: TCP port 443
+SMTP: TCP port 25
+Telnet: 23
+POP3: TCP port 110
+DHCP: UDP ports 67,68
+
+** Ports under 1024 are reserved.
