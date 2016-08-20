@@ -1,0 +1,9 @@
+* Overview of VPN Tunnels
+- VPN tunnels that connect two routers within the same organization: Intranet
+- VPN tunnels that connect two routers from separate organizations: Extranet
+
+- Laptops/desktops can act as VPN endpoints.
+- Adapative Security Appliances (ASA) can act as VPN endpoints.
+
+** Data origin authentication
+- Allows receiver to
